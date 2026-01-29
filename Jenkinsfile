@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         APP_NAME   = 'bible-admin'
-        IMAGE_NAME = 'melodion/bible-admin:1.2'
+        IMAGE_NAME = 'melodion/bible-admin:1.3'
     }
 
     stages {
@@ -51,7 +51,7 @@ pipeline {
                   docker rm ${APP_NAME} || true
                   docker run -d \
                     --name ${APP_NAME} \
-                    --network docker-web_public_net \
+                    --network docker-web_private_net \
                     -p 8081:8080 \
                     ${IMAGE_NAME}
                 '''
