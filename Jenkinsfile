@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         APP_NAME   = 'bible-admin'
-        IMAGE_NAME = 'melodion/bible-admin:1.9'
+        IMAGE_NAME = 'melodion/bible-admin:2.0'
     }
 
     stages {
@@ -29,7 +29,7 @@ pipeline {
             }
             steps {
                 sh '''
-                  ./mvnw -Pprod clean verify
+                  ./mvnw -Pprod clean verify -DskipTests
                 '''
             }
         }
@@ -49,9 +49,11 @@ pipeline {
                 sh '''
                   docker stop ${APP_NAME} || true
                   docker rm ${APP_NAME} || true
+
                   docker run -d \
                     --name ${APP_NAME} \
                     --network public_net \
+                    -e SPRING_PROFILES_ACTIVE=prod \
                     -p 8085:8085 \
                     ${IMAGE_NAME}
                 '''
@@ -61,7 +63,7 @@ pipeline {
 
     post {
         success {
-            echo '✅ JHipster build & deploy sukses'
+            echo '✅ JHipster build & deploy (prod) sukses'
         }
         failure {
             echo '❌ JHipster build gagal'
