@@ -23,7 +23,7 @@ pipeline {
         stage('Build Frontend (NPM)') {
             agent {
                 docker {
-                    image 'node:20-alpine'
+                    image 'node:22-alpine'
                 }
             }
             steps {
