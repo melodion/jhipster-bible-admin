@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         APP_NAME   = 'bible-admin'
-        IMAGE_NAME = 'melodion/bible-admin:latest'
+        IMAGE_NAME = 'melodion/bible-admin:1.1'
     }
 
     stages {
