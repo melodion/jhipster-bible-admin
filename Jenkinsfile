@@ -29,7 +29,7 @@ pipeline {
             }
             steps {
                 sh '''
-                  ./mvnw -Pprod clean verify -DskipTests
+                  ./mvnw -DskipTests
                 '''
             }
         }
