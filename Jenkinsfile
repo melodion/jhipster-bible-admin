@@ -43,7 +43,7 @@ pipeline {
             }
             steps {
                 sh '''
-                  ./mvnw -Pprod clean package -DskipTests
+                  ./mvnw -Pprod clean verify -DskipTests
                 '''
             }
         }
