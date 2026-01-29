@@ -1,0 +1,33 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "bible",
+    "buildTool": "maven",
+    "cacheProvider": "no",
+    "clientFramework": "angular",
+    "clientTestFrameworks": [],
+    "clientTheme": "morph",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1769667983365,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "enableHibernateCache": null,
+    "enableTranslation": false,
+    "entities": [],
+    "feignClient": null,
+    "jhipsterVersion": "8.11.0",
+    "jwtSecretKey": "ODkwNDIzZWI2YmE2ZGZlMGRhODg0ZDFjZDgzYjQ0YzBhY2Y0N2ZlODc0NzgxMGY3NGQ5ZmJhODgyYjkxZWEzMWI4MDEzNjg5ZTkyMTVhN2RjNjliNzg0Zjk1ZWFlODNlOTZiMWU2MGE1OWVkMzNjMDk1ZjI2MDEyMDY5YzcwNmM=",
+    "microfrontend": null,
+    "microfrontends": [],
+    "nativeLanguage": "en",
+    "packageName": "com.infora.bible",
+    "prodDatabaseType": "mysql",
+    "reactive": false,
+    "serverPort": null,
+    "serviceDiscoveryType": null,
+    "syncUserWithIdp": null,
+    "testFrameworks": [],
+    "withAdminUi": true
+  }
+}
