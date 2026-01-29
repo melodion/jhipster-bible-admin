@@ -51,7 +51,7 @@ pipeline {
                   docker rm ${APP_NAME} || true
                   docker run -d \
                     --name ${APP_NAME} \
-                    --network docker-web_private_net \
+                    --network public_net \
                     -p 8081:8080 \
                     ${IMAGE_NAME}
                 '''
