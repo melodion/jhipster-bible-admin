@@ -52,7 +52,7 @@ pipeline {
                   docker run -d \
                     --name ${APP_NAME} \
                     --network public_net \
-                    -p 8081:8081 \
+                    -p 8085:8085 \
                     ${IMAGE_NAME}
                 '''
             }
