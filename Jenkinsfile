@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         APP_NAME   = 'bible-admin'
-        IMAGE_NAME = 'melodion/bible-admin:1.8'
+        IMAGE_NAME = 'melodion/bible-admin:1.9'
     }
 
     stages {
@@ -29,7 +29,7 @@ pipeline {
             }
             steps {
                 sh '''
-                  mvn clean package
+                  ./mvnw -Pprod clean verify
                 '''
             }
         }
